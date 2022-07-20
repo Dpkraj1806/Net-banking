@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <section id="login">
+        <span>Username</span></label><input type="text" id="username" placeholder="Username" value="Deepak"><br>
+        <span>Password</span><input type="text" id="password" placeholder="Password" value="deepak"><br>
+        <button id="loginbtn">Log in</button><br>
+        <span>New user,<a href="register.html">Sign up</a> here</span>
+    </section>
+
+    <section id="dashboard">
+        <div id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#account_details">Account Details</a></li>
+                <li><a href="#transactionsmain">Transactions</a></li>
+            </ul>
+        </div>
+        <div id="info">
+            <section id="home">
+                <h1>Account Summary</h1>
+                <div id="row"> 
+                    <div id="col">
+                        <h4>Name : </h4>
+                        <h4>Phone :</h4>
+                        <h4>Address :</h4>
+                        <h4>Account type:</h4>
+                    </div>
+                    <div id="col">
+                        <h4 id="name"></h4>
+                        <h4 id="phonenumber"></h4>
+                        <h4 id="address"></h4>
+                        <h4 id="accounttype"></h4>
+                    </div>
+                </div>
+            </section>
+            <section id="account_details">
+                <h1>Account Details</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem aliquam, quod facere quaerat odio corporis! Similique perferendis nobis maiores assumenda placeat harum necessitatibus perspiciatis nesciunt! Nihil atque dolores mollitia ratione voluptates labore at dicta, iusto non, ad autem cum? Sint quo aliquam odit quod minus cum est obcaecati quis inventore voluptates deserunt, nihil numquam? Odio quibusdam quo vel itaque repudiandae velit ipsum fugit deserunt quam ut tenetur, sint, temporibus quaerat eveniet ipsam minus nisi ullam sit. Suscipit, hic! Hic id fugiat repellat aliquid deserunt quaerat velit. Quidem, similique tempora asperiores placeat ea fugit, iste assumenda cupiditate nesciunt est temporibus itaque corrupti maxime sed molestiae consequatur a perspiciatis, laboriosam optio totam porro laborum quod. Repudiandae animi rerum cumque porro ipsum illo magni et dicta praesentium vitae quo obcaecati veritatis sit perferendis exercitationem at nobis, odio inventore iste consequatur quia! At voluptatibus nisi ipsam accusamus, cupiditate perferendis aspernatur inventore nam perspiciatis.</p>
+            </section>
+            <section id="transactionsmain">
+                <h1>Transactions</h1>
+                <ul id="transactionslist"></ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur modi unde voluptates totam omnis dolorem hic explicabo perspiciatis, officiis, exercitationem autem. Voluptatibus sed alias, tempora neque consectetur labore aspernatur. Unde, eaque eius consectetur libero reprehenderit qui perspiciatis vel nemo maxime beatae cumque necessitatibus, quidem provident veniam doloribus earum quia sequi quo vitae error nobis. Tempora, ipsam sunt nesciunt, suscipit doloribus placeat cumque commodi aut laborum ut possimus beatae architecto quasi quod iure nulla repellat natus porro id! Facere unde fugiat voluptas culpa necessitatibus impedit ipsum cupiditate vitae perspiciatis eaque maiores aut pariatur aspernatur natus, eligendi nemo asperiores et odit molestiae?</p>
+            </section>
+        </div>
+        <div id="links">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quos veritatis temporibus suscipit quaerat quae tenetur dolor, minima sint sed rem labore ex vel nihil ipsa obcaecati corporis sequi aliquam.</p>
+        </div>
+    </section>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+        #dashboard{
+            display:none;
+            width: 1340px;
+            height: 625px;
+        }
+        #navbar{
+            flex-basis: auto;
+            position: fixed;
+            border: 1px dotted grey;
+            margin-right: 2px;
+        }
+        #home{
+            height: 625px;
+        }
+        #account_details{
+            height: 625px;
+        }
+        #transactions{
+            height: 625px;
+        }
+        #info{
+            flex-basis: 50%;
+            border: 1px dotted grey;
+            margin: 0px 0px 0px 146px;
+        }
+        #links{
+            flex-basis: 25%;
+            border: 1px dotted grey;
+        }
+        #row{
+            display: flex;
+            width: 950px;
+        }
+        #col{
+            flex-basis: 50%;
+        }
+        ul{   
+            list-style-type: none;
+            /* background-color: #ddd; */
+            /* color: #000; */
+        }
+        p{
+            margin-left: 10px;
+        }
+        #col h4{
+            line-height: 0px;
+        }
+    </style>
+   <script>
+        var uid=document.getElementById("username")
+        var pswrd=document.getElementById("password")
+        var dash=document.getElementById("dashboard")
+
+        const login_button=document.getElementById("loginbtn")
+        login_button.addEventListener("click",login)
+
+        function login()
+{
+    if(uid.value!="")
+    {
+        if(pswrd.value!="")
+        {
+            for(let i=0;i<Object.keys(users).length;i++)
+            {
+                if(users[i].username==uid.value)
+                {
+                    if(users[i].password==pswrd.value)
+                    {
+                        //console.log("Hi,"+`${users[i].username}`);
+                        
+                        dash.style.display="flex"
+                        var login=document.getElementById("login")
+                        login.style.display="none"
+                        var name=document.getElementById("name")
+                        var number=document.getElementById("phonenumber")
+                        var address=document.getElementById("address")
+                        var type=document.getElementById("accounttype")
+                        name.innerHTML=users[i].username
+                        number.innerHTML=users[i].phonenumber
+                        address.innerHTML=users[i].address
+                        type.innerHTML=users[i].acctype
+                        var trans=document.getElementById("transactionslist")
+                        len=users[i].transactions.length
+                        var transmain=document.getElementById("transactionsmain")
+                        for(j=0;j<=len-1;j++)
+                        {
+                            var li=document.createElement("li")
+                            li.setAttribute("id",`trans${j+1}`)
+                            trans.appendChild(li)
+                            let val=users[i].transactions[j].date + users[i].transactions[j].type + users[i].transactions[j].value
+                            li.innerHTML=val
+                            
+                        }
+                    }
+                    else
+                    {
+                        console.log("Password is wrong");
+                    }
+                }
+                else
+                {
+                    console.log("Username not found");
+                }
+            }
+        }
+    }
+}
+function dashboard(){
+     
+}
+    </script>
+
+
+
+
+</body>
+</html>

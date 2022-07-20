@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User - Registration</title>
+</head>
+<body>
+     <section id="register">
+        <span>Username</span><input type="text" id="newuser"><br>
+        <span>Password</span><input type="text" id="newpassword"><br>
+        <button id="signupbtn">Sign up</button><br>
+        <span>Already you have a account,<a href="login.html">log in</a> here</span>
+    </section>
+
+    <script>
+        const signup_button=document.getElementById("signupbtn")
+        signup_button.addEventListener("click",register)
+
+function register()
+{
+// console.log(username.value) username value
+// console.log(password.value) password value
+// console.log(login_button) button value
+var uid=username.value
+var pswrd=password.value
+users.push({"username":uid,"password":pswrd})
+console.log(users);
+}
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

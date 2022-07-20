@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="dashboard">
+        <div id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#account_details">Account Details</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+            </ul>
+        </div>
+        <div id="info">
+            <section id="home">
+                <h1>Account Summary</h1>
+                <div id="row"> 
+                    <div id="col">
+                        <h4>Name : </h4>
+                        <h4>Phone :</h4>
+                        <h4>Address :</h4>
+                        <h4>Account type:</h4>
+                    </div>
+                    <div id="col">
+                        <h4 id="name"></h4>
+                        <h4 id="phonenumber"></h4>
+                        <h4 id="address"></h4>
+                        <h4 id="accounttype"></h4>
+                    </div>
+                </div>
+            </section>
+            <section id="account_details">
+                <h1>Account Details</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem aliquam, quod facere quaerat odio corporis! Similique perferendis nobis maiores assumenda placeat harum necessitatibus perspiciatis nesciunt! Nihil atque dolores mollitia ratione voluptates labore at dicta, iusto non, ad autem cum? Sint quo aliquam odit quod minus cum est obcaecati quis inventore voluptates deserunt, nihil numquam? Odio quibusdam quo vel itaque repudiandae velit ipsum fugit deserunt quam ut tenetur, sint, temporibus quaerat eveniet ipsam minus nisi ullam sit. Suscipit, hic! Hic id fugiat repellat aliquid deserunt quaerat velit. Quidem, similique tempora asperiores placeat ea fugit, iste assumenda cupiditate nesciunt est temporibus itaque corrupti maxime sed molestiae consequatur a perspiciatis, laboriosam optio totam porro laborum quod. Repudiandae animi rerum cumque porro ipsum illo magni et dicta praesentium vitae quo obcaecati veritatis sit perferendis exercitationem at nobis, odio inventore iste consequatur quia! At voluptatibus nisi ipsam accusamus, cupiditate perferendis aspernatur inventore nam perspiciatis.</p>
+            </section>
+            <section id="transactions">
+                <h1></h1>
+            </section>
+        </div>
+        <div id="links">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quos veritatis temporibus suscipit quaerat quae tenetur dolor, minima sint sed rem labore ex vel nihil ipsa obcaecati corporis sequi aliquam.</p>
+        </div>
+    </section>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+        #dashboard{
+            display: flex;
+            width: 1340px;
+            height: 625px;
+        }
+        #navbar{
+            flex-basis: auto;
+            position: fixed;
+            border: 1px dotted grey;
+            margin-right: 2px;
+        }
+        #home{
+            height: 625px;
+        }
+        #account_details{
+            height: 625px;
+        }
+        #transactions{
+            height: 625px;
+        }
+        #info{
+            flex-basis: 50%;
+            border: 1px dotted grey;
+            margin: 0px 0px 0px 146px;
+        }
+        #links{
+            flex-basis: 25%;
+            border: 1px dotted grey;
+        }
+        #row{
+            display: flex;
+            width: 950px;
+        }
+        #col{
+            flex-basis: 50%;
+        }
+        ul{   
+            list-style-type: none;
+            /* background-color: #ddd; */
+            /* color: #000; */
+        }
+        p{
+            margin-left: 10px;
+        }
+        #col h4{
+            line-height: 0px;
+        }
+    </style>
+    <script>
+        
+    </script>
+</body>
+</html>
